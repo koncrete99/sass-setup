@@ -1,0 +1,21 @@
+// COLOR
+$color-default: #222;
+$color-primary: rgb(0, 226, 156) !default;
+$color-secondary: #26464d !default;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey-dark: #222222;
+$color-grey-light-1: #eeeeee;
+
+// FONT
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+$font-size-default: 1.6rem;
+
+// BREAKPOINTS
+$bp-sm: 37.5em; // 600px;
+$bp-md: 50em; // 800px;
+$bp-lg: 62.5em; // 1000px
+$bp-xl: 75em; // 1200px
+
+$site-width: 128rem;
