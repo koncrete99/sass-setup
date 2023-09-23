@@ -1,6 +1,10 @@
 @use '../abstracts' as *;
 
 .container {
-	max-width: $site-width;
+	width: min($width-container, 100%);
 	margin: 0 auto;
+	padding: 0 1rem;
+	@include respond(tabletP) {
+		padding: 0 2rem;
+	}
 }

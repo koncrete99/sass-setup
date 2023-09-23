@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.footer {
+	padding: $size-xl 0;
+	background-color: $color-default;
+	color: #aaa;
+	font-size: $font-size-sm;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		@include respond(tabletP) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__list {
+		list-style: none;
+	}
+	&__list-item {
+		display: inline-block;
+	}
+	& a,
+	& a:link {
+		color: currentColor;
+		text-decoration: none;
+		&:hover {
+			color: $color-white;
+		}
+	}
+}

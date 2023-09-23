@@ -1,21 +1,43 @@
 // COLOR
-$color-default: #222;
-$color-primary: rgb(0, 226, 156) !default;
-$color-secondary: #26464d !default;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-grey-dark: #222222;
-$color-grey-light-1: #eeeeee;
+$color-default: #222 !default;
+$color-primary: blue !default;
+$color-secondary: red !default;
+
+$color-black: #000;
+$color-white: #fff;
+$color-grey-light: #aaa;
+$color-grey-dark: #222;
 
 // FONT
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 $font-size-default: 1.6rem;
+$font-size-xxs: 0.8rem;
+$font-size-xs: 1rem;
+$font-size-sm: 1.2rem;
+$font-size-md: 1.4rem;
+$font-size-lg: 2rem;
+$font-size-xl: 3rem;
+$font-size-xxl: 4rem;
+$font-size-xxxl: 5rem;
 
 // BREAKPOINTS
-$bp-sm: 37.5em; // 600px;
-$bp-md: 50em; // 800px;
-$bp-lg: 62.5em; // 1000px
-$bp-xl: 75em; // 1200px
+$bp-sm: 36em !default; // 576px;
+$bp-md: 48em !default; // 768px;
+$bp-lg: 62em !default; // 992px
+$bp-xl: 75em !default; // 1200px
+$bp-xxl: 87.5em !default; // 1400px
 
-$site-width: 128rem;
+// SIZES
+$size-xxs: 0.5rem;
+$size-xs: 1rem;
+$size-sm: 1.5rem;
+$size-md: 2rem;
+$size-lg: 2.5rem;
+$size-xl: 3rem;
+
+$width-container: 128rem;
+
+$border-radius-xs: 3px;
+$border-radius-sm: 5px;
+$border-radius-md: 10px;

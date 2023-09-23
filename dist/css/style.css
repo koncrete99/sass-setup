@@ -1,20 +1,3 @@
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-*/
 *,
 *::before,
 *::after {
@@ -25,11 +8,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 50%;
 }
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 36em) {
   html {
-    font-size: 50%;
+    font-size: 62.5%;
   }
 }
 
@@ -48,12 +31,12 @@ select {
 
 ::-moz-selection {
   color: white;
-  background-color: #26464d;
+  background-color: red;
 }
 
 ::selection {
   color: white;
-  background-color: #26464d;
+  background-color: red;
 }
 
 @keyframes moveInLeft {
@@ -69,21 +52,67 @@ select {
     transform: translate(0);
   }
 }
+a,
+a:link {
+  transition: all 0.3s;
+}
+
 .u-center-text {
   text-align: center;
 }
 
 .header {
   background: darkgray;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 36em) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
 
 .container {
-  max-width: 128rem;
+  width: min(128rem, 100%);
   margin: 0 auto;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.footer {
+  padding: 3rem 0;
+  background-color: #222;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 36em) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list-item {
+  display: inline-block;
+}
+.footer a, .footer a:link {
+  color: currentColor;
+  text-decoration: none;
+}
+.footer a:hover, .footer a:link:hover {
+  color: #fff;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -112,18 +141,18 @@ select {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn--white {
-  background-color: #ffffff;
-  color: #222222;
+  background-color: #fff;
+  color: #222;
 }
 .btn--white::after {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .btn--green {
-  background-color: rgb(0, 226, 156);
-  color: #ffffff;
+  background-color: blue;
+  color: #fff;
 }
 .btn--green::after {
-  background-color: rgb(0, 226, 156);
+  background-color: blue;
 }
 .btn::after {
   content: "";
@@ -144,16 +173,16 @@ select {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: rgb(0, 226, 156);
+  color: blue;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid rgb(0, 226, 156);
+  border-bottom: 1px solid blue;
   padding: 3px;
   transition: all 0.2s;
 }
 .btn-text:hover {
-  background-color: rgb(0, 226, 156);
-  color: #ffffff;
+  background-color: blue;
+  color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
@@ -163,7 +192,8 @@ select {
 }
 
 .card {
-  background: grey;
+  background: #fff;
+  border-radius: 3px;
   width: 200px;
   height: 200px;
 }
@@ -181,13 +211,12 @@ select {
   color: white;
 }
 
-.section-about {
-  background-color: #eeeeee;
+.section-hero {
+  background-color: #aaa;
   padding: 25rem 0;
-  margin-top: -20vh;
 }
-@media only screen and (max-width: 56.25em) {
-  .section-about {
+@media only screen and (min-width: 36em) {
+  .section-hero {
     padding: 20rem 0;
   }
 }
