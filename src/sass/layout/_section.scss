@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+.section {
+	padding: $size-lg 0;
+	@include respond(tabletP) {
+		padding: $size-xl 0;
+	}
+}

@@ -10,18 +10,18 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 50%;
+	font-size: 62.5%;
 	@include respond(tabletP) {
-		font-size: 62.5%;
 	}
 }
 
 body {
 	font-family: $font-primary;
-	color: $color-default;
 	font-size: $font-size-default;
+	color: $color-default;
 	font-weight: 400;
 	line-height: 1.6;
+	background-color: $color-grey-100;
 }
 
 input,

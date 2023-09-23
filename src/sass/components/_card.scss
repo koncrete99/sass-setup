@@ -1,21 +1,36 @@
 @use '../abstracts' as *;
 
 .card {
-	background: $color-white;
+	background: $color-grey-0;
 	border-radius: $border-radius-xs;
-	width: 200px;
-	height: 200px;
-	&--blue {
-		background-color: blue;
+	box-shadow: $box-shadow-sm;
+	display: flex;
+	flex-direction: column;
+	> * {
+		padding: $size-sm;
+		@include respond(tabletP) {
+			padding: $size-sm $size-md;
+		}
 	}
-	&__heading {
-		font-size: 2rem;
+	&--primary {
+		background-color: $color-primary;
+		color: $color-grey-50;
+		.btn--primary {
+			background-color: $color-grey-50;
+			color: $color-default;
+		}
 	}
-}
-
-.card__heading {
-	color: black;
-	.card--blue & {
-		color: white;
+	&__header {
+		font-size: 1rem;
+	}
+	&__content {
+		flex-grow: 1;
+		.btn {
+			margin-top: $size-sm;
+		}
+	}
+	&__footer {
+		border-top: $divider;
+		font-size: $font-size-sm;
 	}
 }

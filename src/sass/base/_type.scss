@@ -1,4 +1,37 @@
-a,
-a:link {
-	transition: all 0.3s;
+@use '../abstracts' as *;
+
+a {
+	&:link,
+	&:visited {
+		color: currentColor;
+		transition: all 0.3s;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-secondary;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: $font-size-xxl;
+}
+
+h2 {
+	font-size: $font-size-xl;
+}
+
+h3 {
+	font-size: $font-size-lg;
+}
+
+p {
+	&:not(:last-of-type) {
+		margin-bottom: $size-sm;
+	}
 }

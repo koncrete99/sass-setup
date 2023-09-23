@@ -1,3 +1,75 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../src/fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../src/fonts/Roboto-Light.woff2") format("woff2"), url("../src/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/Roboto-Regular.woff2") format("woff2"), url("../src/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/fonts/Roboto-Regular.woff2") format("woff2"), url("../src/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/fonts/Roboto-Black.woff2") format("woff2"), url("../src/fonts/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../src/fonts/RobotoSlab-Thin.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../src/fonts/RobotoSlab-Light.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/fonts/RobotoSlab-Regular.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/fonts/RobotoSlab-Regular.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/fonts/RobotoSlab-Bold.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/fonts/RobotoSlab-Black.woff2") format("woff2"), url("../src/fonts/RobotoSlab-Black.ttf") format("truetype");
+}
 *,
 *::before,
 *::after {
@@ -8,20 +80,15 @@
 
 html {
   box-sizing: border-box;
-  font-size: 50%;
+  font-size: 62.5%;
 }
-@media only screen and (min-width: 36em) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
 body {
-  font-family: "Nunito", sans-serif;
-  color: #222;
-  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  color: #030712;
   font-weight: 400;
   line-height: 1.6;
+  background-color: #f3f4f6;
 }
 
 input,
@@ -52,9 +119,35 @@ select {
     transform: translate(0);
   }
 }
-a,
-a:link {
+a:link, a:visited {
+  color: currentColor;
   transition: all 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1.5rem;
 }
 
 .u-center-text {
@@ -62,7 +155,8 @@ a:link {
 }
 
 .header {
-  background: darkgray;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -72,6 +166,38 @@ a:link {
   .header {
     padding: 1rem 2rem;
   }
+}
+.header__logo a,
+.header__logo a:link,
+.header__logo a:visited {
+  display: block;
+  text-decoration: none;
+  background-color: rgb(8, 126, 164);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.header__list {
+  list-style: none;
+}
+.header__list-item {
+  display: inline-block;
+}
+.header__list-item a,
+.header__list-item a:link,
+.header__list-item a:visited {
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.header__list-item a:hover, .header__list-item a:focus,
+.header__list-item a:link:hover,
+.header__list-item a:link:focus,
+.header__list-item a:visited:hover,
+.header__list-item a:visited:focus {
+  color: rgb(8, 126, 164);
 }
 
 .container {
@@ -85,9 +211,18 @@ a:link {
   }
 }
 
+.section {
+  padding: 2.5rem 0;
+}
+@media only screen and (min-width: 36em) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
 .footer {
-  padding: 3rem 0;
-  background-color: #222;
+  padding: 5rem 0;
+  background-color: #030712;
   color: #aaa;
   font-size: 1.2rem;
 }
@@ -108,7 +243,6 @@ a:link {
   display: inline-block;
 }
 .footer a, .footer a:link {
-  color: currentColor;
   text-decoration: none;
 }
 .footer a:hover, .footer a:link:hover {
@@ -118,17 +252,17 @@ a:link {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 0.5rem 1rem;
   display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s;
+  border-radius: 5px;
+  transition: all 0.3s;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   border: none;
   cursor: pointer;
 }
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:hover::after {
@@ -139,20 +273,6 @@ a:link {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.btn--white {
-  background-color: #fff;
-  color: #222;
-}
-.btn--white::after {
-  background-color: #fff;
-}
-.btn--green {
-  background-color: blue;
-  color: #fff;
-}
-.btn--green::after {
-  background-color: blue;
 }
 .btn::after {
   content: "";
@@ -166,58 +286,68 @@ a:link {
   z-index: -1;
   transition: all 0.4s;
 }
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-
-.btn-text:link, .btn-text:visited {
-  font-size: 1.6rem;
-  color: blue;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid blue;
-  padding: 3px;
-  transition: all 0.2s;
-}
-.btn-text:hover {
-  background-color: blue;
+.btn--primary {
+  background-color: rgb(8, 126, 164);
   color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0);
 }
 
 .card {
   background: #fff;
   border-radius: 3px;
-  width: 200px;
-  height: 200px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 }
-.card--blue {
-  background-color: blue;
-}
-.card__heading {
-  font-size: 2rem;
-}
-
-.card__heading {
-  color: black;
-}
-.card--blue .card__heading {
-  color: white;
-}
-
-.section-hero {
-  background-color: #aaa;
-  padding: 25rem 0;
+.card > * {
+  padding: 1.5rem;
 }
 @media only screen and (min-width: 36em) {
-  .section-hero {
-    padding: 20rem 0;
+  .card > * {
+    padding: 1.5rem 2rem;
+  }
+}
+.card--primary {
+  background-color: rgb(8, 126, 164);
+  color: #f9fafb;
+}
+.card--primary .btn--primary {
+  background-color: #f9fafb;
+  color: #030712;
+}
+.card__header {
+  font-size: 1rem;
+}
+.card__content {
+  flex-grow: 1;
+}
+.card__content .btn {
+  margin-top: 1.5rem;
+}
+.card__footer {
+  border-top: 1px solid rgba(3, 7, 18, 0.1);
+  font-size: 1.2rem;
+}
+
+.section--hero {
+  background-color: #030712;
+  color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section--cards .container {
+  display: grid;
+  gap: 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .section--cards .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .section--cards .container {
+    grid-template-columns: repeat(4, 2fr);
   }
 }
 

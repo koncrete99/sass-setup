@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .footer {
-	padding: $size-xl 0;
+	padding: $size-xxl 0;
 	background-color: $color-default;
 	color: #aaa;
 	font-size: $font-size-sm;
@@ -21,10 +21,9 @@
 	}
 	& a,
 	& a:link {
-		color: currentColor;
 		text-decoration: none;
 		&:hover {
-			color: $color-white;
+			color: $color-grey-0;
 		}
 	}
 }

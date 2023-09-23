@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,28 +11,70 @@
 	<body>
 		<div class="site">
 			<header class="header">
-				<div class="header__logo">Logo</div>
+				<div class="header__logo"><a href="">Logo</a></div>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__list-item">Home</li>
-						<li class="header__list-item">About</li>
+						<li class="header__list-item"><a href="">Home</a></li>
+						<li class="header__list-item"><a href="">About</a></li>
 					</ul>
 				</nav>
 			</header>
-			<section class="section-hero">Hero</section>
-			<div class="container">
-				<aside class="sidebar">dfgdf</aside>
-				<main class="content">
-					<section class="about">
-						<div class="card card--blue">
-							<header class="card__heading">Heading</header>
+			<section class="section section--hero">
+				<h1>Heading</h1>
+				<h2>Subheading</h2>
+			</section>
+			<main class="content">
+				<section class="section section--cards">
+					<div class="container">
+						<div class="card">
+							<header class="card__header"><h3>Heading</h3></header>
 							<div class="card__content">
+								<p>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+									diam nonumy eirmod tempor invidunt ut labore et.
+								</p>
 								<a class="btn btn--primary">dfgdf</a>
 							</div>
+							<footer class="card__footer">Footer</footer>
 						</div>
-					</section>
-				</main>
-			</div>
+						<div class="card card--primary">
+							<header class="card__header"><h3>Heading</h3></header>
+							<div class="card__content">
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+								<p>
+									Sed diam nonumy eirmod tempor invidunt ut labore et dolore
+									magna aliquyam erat, sed diam voluptua.
+								</p>
+								<a class="btn btn--primary">dfgdf</a>
+							</div>
+							<footer class="card__footer">Footer</footer>
+						</div>
+						<div class="card">
+							<header class="card__header"><h3>Heading</h3></header>
+							<div class="card__content">
+								<p>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+									diam nonumy eirmod tempor invidunt ut labore et dolore magna
+									aliquyam erat, sed diam voluptua.
+								</p>
+								<a class="btn btn--primary">dfgdf</a>
+							</div>
+							<footer class="card__footer">Footer</footer>
+						</div>
+						<div class="card">
+							<header class="card__header"><h3>Heading</h3></header>
+							<div class="card__content">
+								<p>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+									diam nonumy.
+								</p>
+								<a class="btn btn--primary">dfgdf</a>
+							</div>
+							<footer class="card__footer">Footer</footer>
+						</div>
+					</div>
+				</section>
+			</main>
 			<footer class="footer">
 				<div class="footer__inner container">
 					<div class="footer__copyright">&copy; 2023</div>

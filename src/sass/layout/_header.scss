@@ -1,12 +1,44 @@
 @use '../abstracts' as *;
 
 .header {
-	background: darkgray;
+	background: $color-grey-0;
+	box-shadow: $box-shadow-sm;
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	@include respond(tabletP) {
 		padding: 1rem 2rem;
+	}
+	&__logo {
+		a,
+		a:link,
+		a:visited {
+			display: block;
+			text-decoration: none;
+			background-color: $color-primary;
+			color: $color-grey-0;
+			padding: $size-xs $size-sm;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+	&__list {
+		list-style: none;
+	}
+	&__list-item {
+		display: inline-block;
+		a,
+		a:link,
+		a:visited {
+			text-decoration: none;
+			font-size: $font-size-sm;
+			display: block;
+			padding: $size-xxs $size-xs;
+			&:hover,
+			&:focus {
+				color: $color-primary;
+			}
+		}
 	}
 }

@@ -1,0 +1,15 @@
+@use '../../abstracts' as *;
+
+.section--cards {
+	.container {
+		display: grid;
+		gap: $size-xs;
+		@include respond(tabletP) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: $size-md;
+		}
+		@include respond(laptop) {
+			grid-template-columns: repeat(4, 2fr);
+		}
+	}
+}

@@ -1,17 +1,26 @@
 // COLOR
-$color-default: #222 !default;
-$color-primary: blue !default;
-$color-secondary: red !default;
+$color-grey-0: #fff;
+$color-grey-50: #f9fafb;
+$color-grey-100: #f3f4f6;
+$color-grey-200: #e5e7eb;
+$color-grey-300: #d1d5db;
+$color-grey-400: #9ca3af;
+$color-grey-500: #6b7280;
+$color-grey-600: #4b5563;
+$color-grey-700: #374151;
+$color-grey-800: #1f2937;
+$color-grey-900: #111827;
+$color-grey-950: #030712;
+$color-grey-1000: #000;
 
-$color-black: #000;
-$color-white: #fff;
-$color-grey-light: #aaa;
-$color-grey-dark: #222;
+$color-default: $color-grey-950;
+$color-primary: rgb(8, 126, 164);
+$color-secondary: red;
 
 // FONT
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
-$font-size-default: 1.6rem;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Roboto Slab', serif;
+$font-size-default: 1.5em;
 $font-size-xxs: 0.8rem;
 $font-size-xs: 1rem;
 $font-size-sm: 1.2rem;
@@ -22,11 +31,11 @@ $font-size-xxl: 4rem;
 $font-size-xxxl: 5rem;
 
 // BREAKPOINTS
-$bp-sm: 36em !default; // 576px;
-$bp-md: 48em !default; // 768px;
-$bp-lg: 62em !default; // 992px
-$bp-xl: 75em !default; // 1200px
-$bp-xxl: 87.5em !default; // 1400px
+$bp-sm: 36em; // 576px;
+$bp-md: 48em; // 768px;
+$bp-lg: 62em; // 992px
+$bp-xl: 75em; // 1200px
+$bp-xxl: 87.5em; // 1400px
 
 // SIZES
 $size-xxs: 0.5rem;
@@ -35,9 +44,17 @@ $size-sm: 1.5rem;
 $size-md: 2rem;
 $size-lg: 2.5rem;
 $size-xl: 3rem;
+$size-xxl: 5rem;
 
 $width-container: 128rem;
 
+// RADIUS
 $border-radius-xs: 3px;
 $border-radius-sm: 5px;
 $border-radius-md: 10px;
+
+// SHADOW
+$box-shadow-sm: 0 0 3px rgba(0, 0, 0, 0.3);
+
+// DIVIDER
+$divider: 1px solid rgba($color-grey-950, 0.1);
